@@ -10,7 +10,7 @@ El Mercado Nocturno se desarrolla en el centro de Guayaquil, en el sector de la 
 
 Este sitio web permite conocer el evento, explorar sus principales atractivos y acceder a diferentes espacios de participación.
 
-![Vista previa del proyecto](resources/images/Pagina\de\inicio.png)
+![Vista previa del proyecto](resources/images/Pagina%20de%20inicio.png)
 
 ## Características principales
 

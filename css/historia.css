@@ -1,0 +1,135 @@
+
+/* historia */
+
+.pagina-historia #header {
+    padding-bottom: 2em;
+}
+
+.historia-principal {
+    background-color: var(--marfil);
+}
+
+.texto-historia {
+    padding: 1em;
+}
+
+.texto-historia h3 {
+    margin-bottom: 1em;
+    color: var(--rojo-vino);
+    font-size: 1.7em;
+}
+
+.texto-historia p {
+    margin-bottom: 1.25em;
+}
+
+
+/* banner */
+
+.hero-historia {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    background-image:
+        linear-gradient(rgba(27, 36, 40, 0.72), rgba(27, 36, 40, 0.72)),
+        url("../resources/images/Modified WhatsApp Image 2026-10-03 at 19.08.11.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-historia-contenido {
+    max-width: 760px;
+    padding: 2.5em;
+    background-color: rgba(27, 36, 40, 0.88);
+    border-left: 6px solid var(--dorado);
+    border-radius: 8px;
+}
+
+.hero-historia h2 {
+    color: var(--blanco);
+    font-size: clamp(2em, 5vw, 3.2em);
+    line-height: 1.15;
+    margin-bottom: 0.7em;
+}
+
+.hero-historia p {
+    color: var(--marfil);
+    margin-bottom: 1.5em;
+}
+
+
+/* proposito */
+
+.proposito {
+    background-color: var(--marfil-tostado);
+}
+
+.proposito-card {
+    height: 100%;
+    border-top: 5px solid var(--rojo-vino);
+    text-align: center;
+}
+
+.proposito-card > .icon {
+    display: block;
+    margin-bottom: 0.4em;
+    color: var(--dorado);
+    font-size: 3em;
+}
+
+.proposito-card h3 {
+    color: var(--rojo-vino);
+}
+
+.proposito-card p {
+    margin-bottom: 0;
+}
+
+
+/* invitacion */
+
+.invitacion-historia {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.invitacion-historia h2 {
+    margin-bottom: 0.75em;
+    color: var(--rojo-vino);
+    font-size: 2em;
+}
+
+.invitacion-historia p {
+    margin-bottom: 1.5em;
+}
+
+.invitacion-historia .button {
+    margin: 0.3em;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 736px) {
+
+    .hero-historia {
+        min-height: 350px;
+    }
+
+    .hero-historia-contenido {
+        padding: 1.5em;
+    }
+
+    .texto-historia {
+        padding: 1em 0;
+    }
+
+    .proposito-card {
+        height: auto;
+    }
+
+    .invitacion-historia h2 {
+        font-size: 1.65em;
+    }
+}

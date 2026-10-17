@@ -1,122 +1,16 @@
 
-/* general */
-
-:root {
-    --rojo-vino: #8f1d2c;
-    --marfil: #f7f0e5;
-    --dorado: #d39a18;
-    --azul-oscuro: #233b6e;
-    --carbon: #1b2428;
-    --marfil-tostado: #e8dfd2;
-    --blanco: #ffffff;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--marfil);
-    color: var(--carbon);
-}
-
-body,
-input,
-select,
-textarea,
-button {
-    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-}
-
-a {
-    color: var(--rojo-vino);
-}
-
-.seccion {
-    padding: 5em 0;
-    scroll-margin-top: 2em;
-}
-
-.introduccion-seccion {
-    max-width: 720px;
-    margin: -1em auto 2.5em;
-    text-align: center;
-}
-
-header.major h2 {
-    color: var(--rojo-vino);
-}
-
-header.major h2::before,
-header.major h2::after {
-    border-top-color: var(--marfil-tostado);
-}
-
-.button {
-    background-color: var(--rojo-vino);
-}
-
-.button:hover {
-    background-color: #a92839;
-}
-
-.button.alt {
-    background-color: var(--azul-oscuro);
-}
-
-.button.alt:hover {
-    background-color: #304f8e;
-}
-
-
-/* encabezado */
-
-#header {
-    background-color: var(--blanco);
-    padding-top: 2.5em;
-}
-
-.marca {
-    padding: 0 4em 1.5em;
-    text-align: center;
-}
-
-.marca h1 {
-    margin-bottom: 0.25em;
-}
-
-.marca h1 a {
-    color: var(--carbon);
-}
-
-.marca p {
-    margin: 0;
-    color: #62686b;
-}
-
-#nav > ul > li.current > a,
-#nav > ul > li:hover > a {
-    background-color: var(--rojo-vino);
-    color: var(--blanco);
-}
-
-
 /* banner */
 
 #banner {
     min-height: 72vh;
+    margin-top: 4em;
     padding: 7em 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-image:
-        linear-gradient(
-            rgba(27, 36, 40, 0.34),
-            rgba(27, 36, 40, 0.68)
-        ),
+        linear-gradient(rgba(27, 36, 40, 0.34), rgba(27, 36, 40, 0.68)),
         url("../resources/images/Modified WhatsApp Image 2026-10-03 at 19.08.11.jpg");
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -140,6 +34,8 @@ header.major h2::after {
 
 #banner header p {
     color: var(--blanco);
+    font-style: normal;
+    font-size: 1.2em;
 }
 
 #banner .etiqueta-banner {
@@ -159,37 +55,8 @@ header.major h2::after {
 
 /* conoce */
 
-#main {
-    padding: 0;
-    background-color: var(--marfil);
-    border: 0;
-}
-
-#main::before {
-    display: none;
-}
-
-#main .conoce header.major h2,
-#main .ubicacion header.major h2 {
-    background: var(--marfil);
-    color: var(--rojo-vino);
-}
-
 .conoce {
     background-color: var(--marfil);
-}
-
-.imagen-destacada {
-    margin: 0;
-}
-
-.imagen-destacada img {
-    width: 100%;
-    height: 390px;
-    display: block;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 12px 30px rgba(27, 36, 40, 0.16);
 }
 
 .texto-conoce {
@@ -208,12 +75,6 @@ header.major h2::after {
     background-color: var(--marfil-tostado);
 }
 
-#main .experiencias header.major h2,
-#main .participa header.major h2 {
-    background: var(--marfil-tostado);
-    color: var(--rojo-vino);
-}
-
 .experiencia {
     height: calc(100% - 2em);
     margin-bottom: 2em;
@@ -223,9 +84,9 @@ header.major h2::after {
 }
 
 .experiencia img {
+    display: block;
     width: 100%;
     height: 280px;
-    display: block;
     object-fit: cover;
 }
 
@@ -278,8 +139,6 @@ header.major h2::after {
     border-top-color: rgba(232, 223, 210, 0.25);
 }
 
-/* fecha: fondo rojo y texto blanco */
-
 .agenda ul.dates .date {
     background-color: var(--rojo-vino);
     color: var(--blanco);
@@ -290,14 +149,11 @@ header.major h2::after {
     border-left-color: var(--rojo-vino);
 }
 
-/* numero de fecha: blanco y negrita */
-
 .agenda ul.dates .date strong {
     display: block;
     color: var(--blanco);
-    font-weight: 900;
     font-size: 1.75em;
-    line-height: 1.1;
+    font-weight: 900;
     padding-top: 0.15em;
 }
 
@@ -305,7 +161,6 @@ header.major h2::after {
     margin-bottom: 0.5em;
     color: var(--blanco);
     font-size: 1.3em;
-    font-weight: 700;
 }
 
 .agenda ul.dates p {
@@ -318,38 +173,23 @@ header.major h2::after {
     font-weight: 700;
 }
 
-/* boton de publicacion oficial */
-
 .enlace-publicacion {
     display: inline-block;
     margin-top: 1em;
     padding: 0.65em 1.3em;
-
     background-color: var(--dorado);
     color: var(--carbon);
-
-    border: 0;
     border-radius: 5px;
-
     font-size: 0.9em;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-
-    transition:
-        background-color 0.25s ease,
-        transform 0.25s ease;
+    transition: background-color 0.25s ease;
 }
 
 .enlace-publicacion:hover {
     background-color: #f1c86c;
     color: var(--carbon);
-    transform: translateY(-2px);
-}
-
-.enlace-publicacion:focus-visible {
-    outline: 3px solid var(--blanco);
-    outline-offset: 3px;
 }
 
 .agenda-nota {
@@ -365,10 +205,6 @@ header.major h2::after {
     color: var(--dorado);
 }
 
-.agenda-nota a:hover {
-    color: var(--blanco);
-}
-
 
 /* participa */
 
@@ -378,12 +214,11 @@ header.major h2::after {
 
 .participacion-card {
     height: 100%;
-    border-bottom: 4px solid var(--dorado);
-    text-align: center;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 4px solid var(--dorado);
+    text-align: center;
 }
 
 .participacion-card > .icon {
@@ -400,120 +235,20 @@ header.major h2::after {
     flex-grow: 1;
 }
 
-/* boton visual para paginas pendientes */
-
-.estado-desarrollo {
+.participacion-card .estado-desarrollo {
     display: inline-block;
-    margin-top: 1em;
+    margin-top: auto;
     padding: 0.7em 1.5em;
-
     background-color: var(--rojo-vino);
     color: var(--blanco);
-
-    border: 0;
     border-radius: 5px;
-
     font-size: 0.9em;
     font-weight: 700;
-    line-height: 1.5;
-    text-align: center;
     text-decoration: none;
 }
 
-/* si se usa un button deshabilitado */
-
-button.estado-desarrollo:disabled {
-    background-color: var(--rojo-vino);
-    color: var(--blanco);
-    opacity: 0.8;
-    cursor: not-allowed;
-}
-
-
-/* historia */
-
-.pagina-historia #header {
-    padding-bottom: 2em;
-}
-
-.hero-historia {
-    min-height: 470px;
-    display: flex;
-    align-items: center;
-
-    background-image:
-        linear-gradient(
-            rgba(27, 36, 40, 0.72),
-            rgba(27, 36, 40, 0.72)
-        ),
-        url("../resources/images/Modified WhatsApp Image 2026-10-03 at 19.08.11.jpg");
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.hero-historia-contenido {
-    max-width: 760px;
-    padding: 2.5em;
-    background-color: rgba(27, 36, 40, 0.88);
-    border-left: 6px solid var(--dorado);
-    border-radius: 8px;
-}
-
-.hero-historia h2 {
-    color: var(--blanco);
-    font-size: clamp(2em, 5vw, 3.2em);
-    line-height: 1.15;
-}
-
-.hero-historia p {
-    color: var(--marfil);
-}
-
-.historia-principal {
-    background-color: var(--marfil);
-}
-
-.texto-historia h3 {
-    color: var(--rojo-vino);
-}
-
-.proposito {
-    background-color: var(--marfil-tostado);
-}
-
-.proposito-card {
-    height: 100%;
-    border-top: 5px solid var(--rojo-vino);
-    text-align: center;
-}
-
-.proposito-card > .icon {
-    margin-bottom: 0.4em;
-    color: var(--dorado);
-    font-size: 3em;
-}
-
-.proposito-card h3 {
-    color: var(--rojo-vino);
-}
-
-.hallazgos {
-    margin-top: 3em;
-    padding: 2em;
-    background-color: var(--azul-oscuro);
-    border-left: 6px solid var(--dorado);
-    border-radius: 8px;
-}
-
-.hallazgos h3,
-.hallazgos p {
-    color: var(--blanco);
-}
-
-.hallazgos p {
-    margin-bottom: 0;
+.participacion-card .estado-desarrollo:hover {
+    background-color: #a92839;
 }
 
 
@@ -546,40 +281,10 @@ button.estado-desarrollo:disabled {
 }
 
 .mapa iframe {
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
     border: 0;
-}
-
-
-/* footer */
-
-#footer {
-    background-color: var(--carbon);
-}
-
-#footer h2,
-#footer h3,
-#footer p,
-#footer a {
-    color: var(--blanco);
-}
-
-#footer .divided li {
-    border-top-color: #3d484d;
-}
-
-#footer .social a {
-    background-color: var(--rojo-vino);
-}
-
-#footer .social a:hover {
-    background-color: var(--dorado);
-}
-
-#copyright .links {
-    background-color: #111719;
 }
 
 
@@ -587,25 +292,9 @@ button.estado-desarrollo:disabled {
 
 @media screen and (max-width: 980px) {
 
-    .seccion {
-        padding: 3.5em 0;
-    }
-
-    .marca {
-        padding: 0 3em 1em;
-    }
-
     #banner {
         min-height: 60vh;
         padding: 5em 1.5em;
-    }
-
-    #banner header {
-        padding: 2em;
-    }
-
-    .imagen-destacada img {
-        height: 320px;
     }
 
     .experiencia img {
@@ -615,33 +304,13 @@ button.estado-desarrollo:disabled {
     .agenda-contenido {
         padding: 2em;
     }
-
-    .participacion-card {
-        margin-bottom: 1em;
-    }
-
-    .mapa {
-        height: 350px;
-    }
 }
 
 @media screen and (max-width: 736px) {
 
-    .seccion {
-        padding: 3em 0;
-    }
-
-    .marca {
-        padding: 0 1.5em 1em;
-    }
-
-    .marca h1 {
-        font-size: 1.5em;
-        line-height: 1.2;
-    }
-
     #banner {
         min-height: 55vh;
+        margin-top: 2em;
         padding: 4em 1em;
     }
 
@@ -652,19 +321,10 @@ button.estado-desarrollo:disabled {
 
     #banner header h2 {
         font-size: 2em;
-        line-height: 1.15;
     }
 
     #banner header p {
         font-size: 1.05em;
-    }
-
-    #banner .actions {
-        margin-top: 1.5em;
-    }
-
-    .imagen-destacada img {
-        height: 260px;
     }
 
     .texto-conoce {
@@ -673,7 +333,6 @@ button.estado-desarrollo:disabled {
 
     .experiencia {
         height: auto;
-        margin-bottom: 1em;
     }
 
     .experiencia img {
@@ -692,78 +351,11 @@ button.estado-desarrollo:disabled {
         padding-left: 6.5em;
     }
 
-    .agenda ul.dates h3 {
-        font-size: 1.15em;
-    }
-
-    .enlace-publicacion {
-        font-size: 0.85em;
-        padding: 0.6em 1em;
-    }
-
     .participacion-card {
         height: auto;
     }
 
-    .datos-ubicacion {
-        padding-right: 0;
-    }
-
     .mapa {
         height: 300px;
-    }
-
-    .hero-historia {
-        min-height: 350px;
-    }
-
-    .hero-historia-contenido {
-        padding: 1.5em;
-    }
-
-    .hallazgos {
-        padding: 1.5em;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    .enlace-publicacion {
-        transition: none;
-    }
-
-    .enlace-publicacion:hover {
-        transform: none;
-    }
-}
-
-
-/* titulos de secciones */
-
-#main header.major {
-    border-top-color: #d5c7b4;
-    margin-bottom: 3em;
-}
-
-#main header.major h2 {
-    font-size: clamp(1.8em, 3vw, 2.5em);
-    font-weight: 900;
-    padding: 0 1.2em;
-    line-height: 1.3;
-    color: var(--rojo-vino);
-}
-
-#main .agenda header.major h2 {
-    color: var(--blanco);
-}
-
-@media screen and (max-width: 736px) {
-    #main header.major h2 {
-        font-size: 1.8em;
-        padding: 0 0.6em;
     }
 }

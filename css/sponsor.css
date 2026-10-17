@@ -1,0 +1,91 @@
+
+/* banner */
+
+.banner-sponsor {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(27, 36, 40, 0.88),
+            rgba(27, 36, 40, 0.30)
+        ),
+        url("../resources/images/Modified WhatsApp Image 2026-10-03 at 19.08.11.jpg");
+}
+
+
+/* aliados */
+
+.lista_aliados {
+    width: 100%;
+    max-width: 1050px;
+    margin: 2em auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5em;
+    align-items: center;
+}
+
+.lista_aliados .aliado {
+    width: 100%;
+    min-width: 0;
+    height: 150px;
+    padding: 1.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--blanco);
+    border-radius: 5px;
+    border-bottom: 3px solid var(--dorado);
+}
+
+.lista_aliados .aliado img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+
+/* formulario */
+
+#nuevo_aliado .formulario-auxiliar {
+    border-top-color: var(--rojo-vino);
+}
+
+#nuevo_aliado .button {
+    background-color: var(--rojo-vino);
+}
+
+#nuevo_aliado .button:hover {
+    background-color: #a92839;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 980px) {
+
+    .lista_aliados {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .lista_aliados {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1em;
+    }
+
+    .lista_aliados .aliado {
+        height: 115px;
+        padding: 0.75em;
+    }
+
+    .lista_aliados .aliado img {
+        max-height: 80px;
+    }
+}

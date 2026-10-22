@@ -90,15 +90,20 @@ button.button {
 
 .button:hover,
 button.button:hover {
-    background-color: #a92839;
+    background-color: #ffffff;
+    color: var(--rojo-vino);
+    border: 5px solid var(--rojo-vino);
 }
 
 .button.alt {
     background-color: var(--azul-oscuro);
+    color: var(--blanco);
 }
 
 .button.alt:hover {
-    background-color: #304f8e;
+    background-color: #ffffff;
+    color: var(--azul-oscuro);
+    border: 5px solid var(--azul-oscuro);
 }
 
 

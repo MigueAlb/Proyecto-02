@@ -83,6 +83,38 @@
     border-bottom: 5px solid var(--dorado);
 }
 
+.experiencias .conteiner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.experiencias .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+}
+
+.experiencias .box-experiencias {
+    flex: 1 500px;
+    max-width: 500px;
+    overflow: hidden;
+    background-color: #f7f0e5;
+    color: #233b6e;
+    border-bottom: 0px solid #d39a18;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px #17131625;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experiencias .box-experiencias:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #17131645;
+    border-bottom: 5px solid #d39a18;;
+}
+
 .experiencia img {
     display: block;
     width: 100%;

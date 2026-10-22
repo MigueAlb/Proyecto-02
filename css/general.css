@@ -94,20 +94,24 @@ button.button:hover {
     background-color: #ffffff;
     color: #8f1d2c;
     border-bottom: 5px solid #8f1d2c;
-    margin-bottom: 5px;
+}
+
+.button .texto{
+    color: var(--blanco);
+}
+
+.button:hover .texto {
+    color: var(--carbon);
 }
 
 .button.alt {
     background-color: #233b6e;
-    color: var(--blanco);
     border-radius: 25px;
 }
 
 .button.alt:hover {
     background-color: #ffffff;
-    color: #233b6e;
     border-bottom: 5px solid #233b6e;
-    margin-bottom: 5px;
 }
 
 

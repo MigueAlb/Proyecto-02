@@ -86,24 +86,26 @@ a {
 button.button {
     background-color: var(--rojo-vino);
     color: var(--blanco);
+    border-radius: 25px;
 }
 
 .button:hover,
 button.button:hover {
     background-color: #ffffff;
     color: var(--rojo-vino);
-    border: 5px solid var(--rojo-vino);
+    border-bottom: 5px solid var(--rojo-vino);
 }
 
 .button.alt {
     background-color: var(--azul-oscuro);
     color: var(--blanco);
+    border-radius: 25px;
 }
 
 .button.alt:hover {
     background-color: #ffffff;
     color: var(--azul-oscuro);
-    border: 5px solid var(--azul-oscuro);
+    border-bottom: 5px solid var(--azul-oscuro);
 }
 
 

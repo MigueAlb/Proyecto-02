@@ -102,29 +102,26 @@ button.button:hover {
     background-color: #ffffff;
     color: #8f1d2c;
     border-bottom: 5px solid #8f1d2c;
-    margin-bottom: 5px;
+}
+
+.button .texto{
+    color: var(--blanco);
+}
+
+.button:hover .texto {
+    color: var(--carbon);
 }
 
 /* botones alternativos */
 
 .button.alt {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
-    border-bottom-color: transparent;
+    background-color: #233b6e;
+    border-radius: 25px;
 }
 
 .button.alt:hover {
-    background-color: var(--blanco);
-    color: var(--azul-oscuro);
-    border-bottom-color: var(--azul-oscuro);
-}
-
-/* botones al presionar */
-
-.button:active,
-button.button:active {
-    transform: none;
-    box-shadow: none;
+    background-color: #ffffff;
+    border-bottom: 5px solid #233b6e;
 }
 
 

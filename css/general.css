@@ -80,13 +80,21 @@ a {
 }
 
 
+
 /* botones */
 
 .button,
 button.button {
     background-color: var(--rojo-vino);
     color: var(--blanco);
+    border: none;
+    border-bottom: 5px solid transparent;
     border-radius: 25px;
+    box-shadow: none;
+    transform: none;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
 }
 
 .button:hover,
@@ -97,17 +105,26 @@ button.button:hover {
     margin-bottom: 5px;
 }
 
+/* botones alternativos */
+
 .button.alt {
-    background-color: #233b6e;
+    background-color: var(--azul-oscuro);
     color: var(--blanco);
-    border-radius: 25px;
+    border-bottom-color: transparent;
 }
 
 .button.alt:hover {
-    background-color: #ffffff;
-    color: #233b6e;
-    border-bottom: 5px solid #233b6e;
-    margin-bottom: 5px;
+    background-color: var(--blanco);
+    color: var(--azul-oscuro);
+    border-bottom-color: var(--azul-oscuro);
+}
+
+/* botones al presionar */
+
+.button:active,
+button.button:active {
+    transform: none;
+    box-shadow: none;
 }
 
 

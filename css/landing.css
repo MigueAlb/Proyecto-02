@@ -69,15 +69,23 @@
 }
 
 
+
 /* experiencias */
 
 .experiencias {
     background-color: var(--marfil-tostado);
+    padding: 5em 0;
 }
 
-.experiencia {
-    height: calc(100% - 2em);
-    margin-bottom: 2em;
+.experiencias .container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* distribucion */
+
+.experiencias .row {
+    display: grid;
     padding: 0;
     overflow: hidden;
     border-bottom: 5px solid var(--dorado);
@@ -101,6 +109,40 @@
 
 .experiencia-contenido p {
     margin-bottom: 0;
+    color: var(--carbon);
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+/* responsive */
+
+@media screen and (max-width: 980px) {
+    .experiencias .row {
+        gap: 22px;
+    }
+
+    .experiencias .box-experiencia img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .experiencias {
+        padding: 3em 0;
+    }
+
+    .experiencias .row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .experiencias .box-experiencia img {
+        height: 240px;
+    }
+
+    .experiencias .experiencia-contenido {
+        padding: 1.5em;
+    }
 }
 
 
@@ -206,6 +248,7 @@
 }
 
 
+
 /* participa */
 
 .participa {
@@ -235,20 +278,28 @@
     flex-grow: 1;
 }
 
+/* botones de participa */
+
 .participacion-card .estado-desarrollo {
     display: inline-block;
     margin-top: auto;
     padding: 0.7em 1.5em;
     background-color: var(--rojo-vino);
     color: var(--blanco);
+    border: 0;
+    border-bottom: 5px solid transparent;
     border-radius: 5px;
     font-size: 0.9em;
     font-weight: 700;
     text-decoration: none;
+    box-shadow: none;
+    transform: none;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease;
 }
 
 .participacion-card .estado-desarrollo:hover {
-    background-color: #a92839;
 }
 
 

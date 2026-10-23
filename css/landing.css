@@ -1,4 +1,3 @@
-
 /* banner */
 
 #banner {
@@ -69,7 +68,6 @@
 }
 
 
-
 /* experiencias */
 
 .experiencias {
@@ -82,99 +80,105 @@
     margin: 0 auto;
 }
 
+#main .experiencias header.major h2 {
+    background-color: var(--marfil-tostado);
+    color: var(--rojo-vino);
+}
+
+.experiencias .introduccion-seccion {
+    color: var(--carbon);
+}
+
 /* distribucion */
 
 .experiencias .row {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin: 0;
+    padding-top: 8px;
+}
+
+.experiencias .row > div {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    padding: 0;
+}
+
+
+
+
+/* tarjetas */
+
+.experiencias .box-experiencia {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
     padding: 0;
     overflow: hidden;
-    border-bottom: 5px solid var(--dorado);
+    background-color: var(--marfil);
+    border: 0;
+    border-bottom: 5px solid transparent;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(27, 36, 40, 0.12);
+    box-sizing: border-box;
+    transform: translateY(0);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
 }
 
-.experiencias .conteiner {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-    align-items: center;
-}
+/* animacion al pasar el mouse */
 
-.experiencias .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;
-}
-
-.experiencias .box-experiencias {
-    flex: 1 500px;
-    max-width: 500px;
-    overflow: hidden;
-    background-color: #f7f0e5;
-    color: #233b6e;
-    border-bottom: 0px solid #d39a18;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px #17131625;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.experiencias .box-experiencias:hover {
+.experiencias .box-experiencia:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px #17131645;
-    border-bottom: 5px solid #d39a18;;
+    box-shadow: 0 12px 25px rgba(27, 36, 40, 0.20);
+    border-bottom-color: var(--dorado);
 }
 
-.experiencia img {
+
+/* imagenes */
+
+.experiencias .box-experiencia > img {
     display: block;
+    flex: 0 0 auto;
     width: 100%;
-    height: 280px;
+    max-width: 100%;
+    min-width: 0;
+    height: 300px;
+    margin: 0;
+    padding: 0;
     object-fit: cover;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
 }
 
-.experiencia-contenido {
+/* contenido */
+
+.experiencias .experiencia-contenido {
+    flex: 1;
+    width: 100%;
     padding: 2em;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-.experiencia-contenido h3 {
-    margin-bottom: 0.55em;
+.experiencias .experiencia-contenido h3 {
+    margin-bottom: 0.7em;
     color: var(--rojo-vino);
+    font-size: 1.65em;
+    font-weight: 800;
 }
 
-.experiencia-contenido p {
+.experiencias .experiencia-contenido p {
     margin-bottom: 0;
     color: var(--carbon);
     font-size: 1.05em;
     line-height: 1.8;
-}
-
-/* responsive */
-
-@media screen and (max-width: 980px) {
-    .experiencias .row {
-        gap: 22px;
-    }
-
-    .experiencias .box-experiencia img {
-        height: 250px;
-    }
-}
-
-@media screen and (max-width: 736px) {
-    .experiencias {
-        padding: 3em 0;
-    }
-
-    .experiencias .row {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .experiencias .box-experiencia img {
-        height: 240px;
-    }
-
-    .experiencias .experiencia-contenido {
-        padding: 1.5em;
-    }
 }
 
 
@@ -280,7 +284,6 @@
 }
 
 
-
 /* participa */
 
 .participa {
@@ -332,6 +335,11 @@
 }
 
 .participacion-card .estado-desarrollo:hover {
+    background-color: var(--blanco);
+    color: var(--rojo-vino);
+    border-bottom-color: var(--rojo-vino);
+    box-shadow: none;
+    transform: none;
 }
 
 
@@ -380,8 +388,12 @@
         padding: 5em 1.5em;
     }
 
-    .experiencia img {
-        height: 240px;
+    .experiencias .row {
+        gap: 22px;
+    }
+
+    .experiencias .box-experiencia > img {
+        height: 250px;
     }
 
     .agenda-contenido {
@@ -414,15 +426,20 @@
         padding: 1em 0;
     }
 
-    .experiencia {
-        height: auto;
+    .experiencias {
+        padding: 3em 0;
     }
 
-    .experiencia img {
-        height: 230px;
+    .experiencias .row {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
-    .experiencia-contenido {
+    .experiencias .box-experiencia > img {
+        height: 240px;
+    }
+
+    .experiencias .experiencia-contenido {
         padding: 1.5em;
     }
 

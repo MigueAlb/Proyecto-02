@@ -11,22 +11,14 @@
     --texto: #30383a;
 
     --fondo-continuo:
-        radial-gradient(
-            ellipse at 80% 25%,
-            rgba(255, 255, 255, 0.65),
-            transparent 55%
-        ),
-        radial-gradient(
-            ellipse at 15% 75%,
-            rgba(215, 174, 127, 0.13),
-            transparent 60%
-        ),
         linear-gradient(
-            90deg,
-            #f3e9dc 0%,
-            #f1e7db 50%,
-            #f6eee5 100%
-        );
+            180deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.34) 32%,
+            rgba(211, 154, 24, 0.07) 70%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        #f3e2cf;
 }
 
 /* BASE */
@@ -84,13 +76,14 @@ b {
 #main > .seccion {
     position: relative;
     margin: 0;
-    padding: 5em 0;
+    padding: 4em 0;
     border: 0;
     scroll-margin-top: 2em;
 }
 
 #main > .seccion + .seccion {
     border-top: 0;
+    padding-top: 3em;
 }
 
 /* Los fondos claros usan el degradado de #main */
@@ -140,12 +133,13 @@ b {
     content: "";
     display: block;
     flex: 1;
+    min-width: 45px;
     max-width: 230px;
-    height: 1px;
+    height: 2px;
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(143, 29, 44, 0.50)
+        rgba(143, 29, 44, 0.58)
     );
 }
 
@@ -218,11 +212,15 @@ button.button.alt:hover {
 #header {
     position: relative;
     z-index: 100;
-    padding-top: 1.35em;
+    height: 235px;
+    margin: 0;
+    padding: 2em 0 1.35em;
+    box-sizing: border-box;
     background:
         radial-gradient(circle at 18% 0%, rgba(211, 154, 24, 0.11), transparent 30%),
         linear-gradient(120deg, #15232c 0%, #203746 55%, #18262f 100%);
-    border-bottom: 2px solid rgba(211, 154, 24, 0.85);
+    border: 0;
+    box-shadow: none;
 }
 
 .marca {
@@ -232,6 +230,8 @@ button.button.alt:hover {
 
 .marca h1 {
     margin-bottom: 0.25em;
+    font-size: clamp(2.5em, 3.4vw, 3.2em);
+    line-height: 1.08;
 }
 
 .marca h1 a {
@@ -282,11 +282,14 @@ button.button.alt:hover {
 /* BANNERS INTERIORES */
 
 .banner-auxiliar {
-    min-height: 500px;
+    min-height: calc(100vh - 235px);
+    min-height: calc(100svh - 235px);
     display: flex;
     align-items: center;
-    padding: 5em 0;
-    margin-bottom: 0;
+    padding: 4em 0;
+    margin: 0 !important;
+    border: 0 !important;
+    box-sizing: border-box;
     background-color: var(--carbon);
     background-position: center;
     background-size: cover;
@@ -529,12 +532,18 @@ button.button.alt:hover {
 
 @media screen and (max-width: 980px) {
 
+    #header {
+        height: 220px;
+        padding-bottom: 1.1em;
+    }
+
     #main > .seccion {
         padding: 3.5em 0;
     }
 
     .banner-auxiliar {
-        min-height: 420px;
+        min-height: calc(100vh - 220px);
+        min-height: calc(100svh - 220px);
         padding: 4em 0;
     }
 
@@ -555,6 +564,11 @@ button.button.alt:hover {
 
 @media screen and (max-width: 736px) {
 
+    #header {
+        height: 105px;
+        padding: 1.25em 0 0.8em;
+    }
+
     #main > .seccion {
         padding: 3em 0;
     }
@@ -564,7 +578,8 @@ button.button.alt:hover {
     }
 
     .banner-auxiliar {
-        min-height: 360px;
+        min-height: calc(100vh - 105px);
+        min-height: calc(100svh - 105px);
         padding: 3em 0;
     }
 
@@ -591,6 +606,7 @@ button.button.alt:hover {
 
     #main header.major::before,
     #main header.major::after {
+        min-width: 20px;
         max-width: 55px;
     }
 

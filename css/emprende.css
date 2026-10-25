@@ -25,41 +25,43 @@
 /* Encabezado */
 
 .participar .major {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(45px, 1fr) auto minmax(45px, 1fr);
     align-items: center;
+    justify-content: center;
+    column-gap: 20px;
     text-align: center;
     margin-bottom: 50px;
 }
 
 .participar .major::before,
 .participar .major::after {
-    display: none;
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: 2px;
+}
+
+.participar .major::before {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+}
+
+.participar .major::after {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: start;
 }
 
 .participar .major h2 {
+    grid-column: 2;
+    grid-row: 1;
     color: var(--rojo-vino);
     font-size: clamp(2rem, 3vw, 2.7rem);
     font-weight: 750;
     letter-spacing: -0.8px;
-    margin-bottom: 20px;
-}
-
-.participar-descripcion {
-    max-width: 750px;
-    margin: 0 auto;
-    color: var(--negro);
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-.participar-descripcion::after {
-    content: "";
-    display: block;
-    width: min(190px, 55%);
-    height: 2px;
-    margin: 1.5em auto 0;
-    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    margin-bottom: 0;
 }
 
 /* Lista de pasos */
@@ -188,7 +190,19 @@
     }
 
     .participar .major {
+        grid-template-columns: minmax(24px, 1fr) auto minmax(24px, 1fr);
+        column-gap: 10px;
         margin-bottom: 35px;
+    }
+
+    .participar .major::before,
+    .participar .major::after {
+        min-width: 24px;
+        max-width: 45px;
+    }
+
+    .participar .major h2 {
+        font-size: 1.65rem;
     }
 
     .tarjeta-auxiliar.paso {

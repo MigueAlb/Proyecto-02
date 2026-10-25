@@ -11,7 +11,7 @@ body.homepage #page-wrapper {
     flex-direction: column;
     min-height: 100vh;
     min-height: 100svh;
-    padding: 1.35em 0 0 !important;
+    padding: 2em 0 0 !important;
     border: 0 !important;
     border-bottom: none !important;
     outline: 0 !important;
@@ -71,7 +71,7 @@ body.homepage #page-wrapper {
 
     width: 100%;
     min-height: 0;
-    margin: 0 !important;
+    margin: 1.35em 0 0 !important;
     padding: 5em 1.5em;
 
     background-image:
@@ -614,11 +614,11 @@ body.homepage #page-wrapper {
     #header {
         min-height: 100vh;
         min-height: 100svh;
-        padding: 2em 0 3em !important;
+        padding: 1.25em 0 0 !important;
     }
 
     #banner {
-        margin-top: 2em;
+        margin-top: 1em !important;
         padding: 3em 1em;
     }
 

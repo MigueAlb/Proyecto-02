@@ -1,41 +1,178 @@
-
 /* banner */
 
 .banner-emprende {
     background-image:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             rgba(27, 36, 40, 0.88),
-            rgba(27, 36, 40, 0.30)
-        ),
+            rgba(27, 36, 40, 0.30)),
         url("../resources/images/emprendimiento.png");
 }
 
 
 /* pasos */
 
+.participar {
+    background-color: var(--crema);
+    padding: 80px 24px 90px;
+    overflow: hidden;
+}
+
+.participar .container {
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+
+.participar .major {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.participar .major h2 {
+    color: var(--rojo-vino);
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    font-weight: 750;
+    letter-spacing: -0.8px;
+    margin-bottom: 20px;
+}
+
+.participar-descripcion {
+    max-width: 750px;
+    margin: 0 auto;
+    color: var(--negro);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Lista de pasos */
+
+.pasos-lista {
+    position: relative;
+    align-items: stretch;
+}
+
+/* Línea discontinua entre los números */
+
+.pasos-lista::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 16%;
+    right: 16%;
+    border-top: 2px dashed var(--dorado);
+    opacity: 0.8;
+}
+
+/* Tarjetas */
+
+.tarjeta-auxiliar.paso {
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+    box-sizing: border-box;
+
+    background-color: #fffdf9;
+    border: 1px solid rgba(157, 28, 44, 0.09);
+    border-top: 5px solid var(--dorado);
+    border-radius: 18px;
+
+    padding: 32px 30px 35px;
+    box-shadow: 0 8px 24px rgba(83, 48, 26, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.tarjeta-auxiliar.paso:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 18px 35px rgba(83, 48, 26, 0.12);
+    border-top-color: var(--rojo-vino);
+}
+
+/* Número circular */
+
 .numero-paso {
-    display: block;
-    margin-bottom: 0.5em;
-    color: var(--rojo-vino);
-    font-size: 3em;
-    font-weight: 900;
-    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+    box-sizing: border-box;
+
+    margin: -2px 0 30px;
+    border-radius: 50%;
+
+    background-color: var(--rojo-vino);
+    color: #fffaf0;
+
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    border: 5px solid #fffdf9;
+    outline: 2px solid var(--dorado);
+
+    position: relative;
+    z-index: 1;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-
-/* tarjetas de emprendimiento */
-
-.tarjeta-auxiliar {
-    border-bottom-color: var(--dorado);
+.paso:hover .numero-paso {
+    background-color: var(--dorado);
+    color: var(--rojo-vino);
+    transform: rotate(-8deg) scale(1.06);
 }
 
-.tarjeta-auxiliar h3 {
+/* Títulos y descripciones */
+
+.tarjeta-auxiliar.paso h3 {
     color: var(--rojo-vino);
+    font-size: 1.35rem;
+    line-height: 1.35;
+    margin: 0 0 18px;
+    font-weight: 750;
 }
 
-.tarjeta-auxiliar > .icon {
-    color: var(--rojo-vino);
+.tarjeta-auxiliar.paso>p:last-child {
+    color: var(--negro);
+    font-size: 1rem;
+    line-height: 1.85;
+    margin: 0;
+}
+
+/* Adaptación a pantallas pequeñas */
+
+@media screen and (max-width: 980px) {
+    .pasos-lista::before {
+        display: none;
+    }
+
+    .tarjeta-auxiliar.paso {
+        padding: 28px 22px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .participar {
+        padding: 55px 20px 60px;
+    }
+
+    .participar .major {
+        margin-bottom: 35px;
+    }
+
+    .tarjeta-auxiliar.paso {
+        min-height: auto;
+        margin-bottom: 24px;
+    }
 }
 
 
@@ -46,7 +183,7 @@
     text-align: center;
 }
 
-.beneficio > .icon {
+.beneficio>.icon {
     display: block;
     margin-bottom: 0.5em;
     color: var(--dorado);

@@ -218,12 +218,15 @@ button.button.alt:hover {
 #header {
     position: relative;
     z-index: 100;
-    padding-top: 2.5em;
-    background: var(--blanco);
+    padding-top: 1.35em;
+    background:
+        radial-gradient(circle at 18% 0%, rgba(211, 154, 24, 0.11), transparent 30%),
+        linear-gradient(120deg, #15232c 0%, #203746 55%, #18262f 100%);
+    border-bottom: 2px solid rgba(211, 154, 24, 0.85);
 }
 
 .marca {
-    padding: 0 4em 1.5em;
+    padding: 0 2em 1em;
     text-align: center;
 }
 
@@ -232,12 +235,15 @@ button.button.alt:hover {
 }
 
 .marca h1 a {
-    color: var(--carbon);
+    color: var(--blanco);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.24);
 }
 
 .marca p {
     margin: 0;
-    color: #62686b;
+    color: #efd79d;
+    font-weight: 500;
+    letter-spacing: 0.025em;
 }
 
 /* NAVEGACION */
@@ -245,12 +251,26 @@ button.button.alt:hover {
 #nav {
     position: relative;
     z-index: 100;
+    padding: 0.45em 1.25em 0.8em;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+#nav > ul > li > a {
+    color: #f8f3e9;
+    border: 1px solid transparent;
+    border-radius: 22px;
+    font-weight: 600;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 #nav > ul > li.current > a,
 #nav > ul > li:hover > a {
     background-color: var(--rojo-vino);
     color: var(--blanco);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
 }
 
 /* Participa no muestra flecha */

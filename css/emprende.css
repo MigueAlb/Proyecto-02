@@ -25,8 +25,16 @@
 /* Encabezado */
 
 .participar .major {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 50px;
+}
+
+.participar .major::before,
+.participar .major::after {
+    display: none;
 }
 
 .participar .major h2 {
@@ -43,6 +51,15 @@
     color: var(--negro);
     font-size: 1.05rem;
     line-height: 1.8;
+}
+
+.participar-descripcion::after {
+    content: "";
+    display: block;
+    width: min(190px, 55%);
+    height: 2px;
+    margin: 1.5em auto 0;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
 }
 
 /* Lista de pasos */
@@ -182,6 +199,35 @@
 
 
 /* beneficios */
+
+.beneficios header.major {
+    width: 100%;
+}
+
+.beneficios header.major::before,
+.beneficios header.major::after {
+    opacity: 1;
+    background: linear-gradient(90deg, transparent, rgba(143, 29, 44, 0.65));
+}
+
+.beneficios .tarjeta-auxiliar {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.beneficios .tarjeta-auxiliar:hover {
+    transform: translateY(-9px);
+    border-bottom-color: var(--rojo-vino);
+    box-shadow: 0 18px 35px rgba(83, 48, 26, 0.14);
+}
+
+.beneficios .tarjeta-auxiliar > .icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.beneficios .tarjeta-auxiliar:hover > .icon {
+    color: var(--dorado);
+    transform: translateY(-3px) scale(1.08);
+}
 
 .beneficio {
     padding: 2em;

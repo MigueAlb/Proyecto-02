@@ -1,24 +1,35 @@
 /* AJUSTES GENERALES */
 
+body.homepage,
+body.homepage #page-wrapper {
+    margin: 0;
+    background: #f3e2cf !important;
+}
+
 #header {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     min-height: 100svh;
-    padding: 2.5em 0 4em !important;
+    padding: 1.35em 0 0 !important;
     border: 0 !important;
     border-bottom: none !important;
     outline: 0 !important;
     box-shadow: none !important;
     box-sizing: border-box;
+    margin: 0 !important;
+    overflow: hidden;
 }
 
 #main {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     border: 0 !important;
     outline: 0;
-    background: #f4e9dc !important;
+    background: #f3e2cf !important;
+    background-attachment: scroll !important;
+    background-origin: border-box !important;
+    background-clip: border-box !important;
     box-shadow: none !important;
 }
 
@@ -34,17 +45,25 @@
 #main > .seccion,
 #main > .seccion + .seccion {
     position: relative;
-    isolation: isolate;
+    isolation: auto;
     margin: 0;
     border: 0 !important;
     outline: 0 !important;
     box-shadow: none;
 }
 
+#main > .seccion:first-child {
+    margin-top: 0 !important;
+    border-top: 0 !important;
+}
+
 
 /* BANNER */
 
 #banner {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     display: flex;
     flex: 1 1 auto;
     align-items: center;
@@ -52,7 +71,7 @@
 
     width: 100%;
     min-height: 0;
-    margin: 3em 0 0;
+    margin: 0 !important;
     padding: 5em 1.5em;
 
     background-image:
@@ -66,9 +85,30 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    border: 0;
+    border: 0 !important;
+    border-bottom: 0 !important;
     box-shadow: none;
     box-sizing: border-box;
+}
+
+#banner .banner-video,
+#banner .banner-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#banner .banner-video {
+    z-index: -2;
+    object-fit: cover;
+}
+
+#banner .banner-overlay {
+    z-index: -1;
+    background:
+        linear-gradient(90deg, rgba(15, 25, 31, 0.74), rgba(27, 36, 40, 0.38)),
+        linear-gradient(180deg, rgba(27, 36, 40, 0.12), rgba(27, 36, 40, 0.55));
 }
 
 #banner header {
@@ -137,86 +177,30 @@
 }
 
 
-/* FONDO DE CONOCE */
+/* FONDO BEIGE CONTINUO */
 
-#main .conoce {
-    background: linear-gradient(
+#main .conoce,
+#main .experiencias,
+#main .participa,
+#main .ubicacion {
+    background-color: #f3e2cf !important;
+    background-image: linear-gradient(
         180deg,
-        #f7f0e5 0%,
-        #f7f0e5 12%,
-        #f5eadc 42%,
-        #f2e3d1 70%,
-        #efddc8 100%
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.34) 32%,
+        rgba(211, 154, 24, 0.07) 70%,
+        rgba(255, 255, 255, 0) 100%
     ) !important;
 }
 
-
-/* FONDO DE EXPERIENCIAS */
-
-#main .experiencias {
-    background:
-        radial-gradient(
-            ellipse at 84% 24%,
-            rgba(255, 255, 255, 0.34) 0%,
-            rgba(255, 255, 255, 0) 42%
-        ),
-        radial-gradient(
-            ellipse at 12% 78%,
-            rgba(143, 29, 44, 0.055) 0%,
-            rgba(143, 29, 44, 0) 45%
-        ),
-        linear-gradient(
-            135deg,
-            #dfc2a0 0%,
-            #ead4ba 48%,
-            #e2c5a4 100%
-        ) !important;
-}
-
-
-/* FONDO DE PARTICIPA */
-
+#main .conoce,
 #main .participa {
-    background:
-        radial-gradient(
-            ellipse at 14% 25%,
-            rgba(211, 154, 24, 0.10) 0%,
-            rgba(211, 154, 24, 0) 45%
-        ),
-        radial-gradient(
-            ellipse at 88% 70%,
-            rgba(255, 255, 255, 0.65) 0%,
-            rgba(255, 255, 255, 0) 50%
-        ),
-        linear-gradient(
-            135deg,
-            #faf3e9 0%,
-            #f3e5d3 50%,
-            #eedbc4 100%
-        ) !important;
+    padding-bottom: 2.5em;
 }
 
-
-/* FONDO DE UBICACIÓN */
-
+#main .experiencias,
 #main .ubicacion {
-    background:
-        radial-gradient(
-            ellipse at 82% 22%,
-            rgba(255, 255, 255, 0.42) 0%,
-            rgba(255, 255, 255, 0) 46%
-        ),
-        radial-gradient(
-            ellipse at 15% 82%,
-            rgba(143, 29, 44, 0.05) 0%,
-            rgba(143, 29, 44, 0) 44%
-        ),
-        linear-gradient(
-            135deg,
-            #dfc2a2 0%,
-            #ead5bd 52%,
-            #e4c8aa 100%
-        ) !important;
+    padding-top: 2.5em;
 }
 
 
@@ -655,50 +639,6 @@
         padding: 1em 0;
     }
 
-    #main .conoce {
-        background: linear-gradient(
-            180deg,
-            #f7f0e5 0%,
-            #f7f0e5 10%,
-            #f5eadc 42%,
-            #f2e3d1 70%,
-            #efddc8 100%
-        ) !important;
-    }
-
-    #main .experiencias {
-        background:
-            radial-gradient(
-                ellipse at 85% 20%,
-                rgba(255, 255, 255, 0.28),
-                transparent 40%
-            ),
-            linear-gradient(
-                135deg,
-                #dfc2a0 0%,
-                #ead4ba 48%,
-                #e2c5a4 100%
-            ) !important;
-    }
-
-    #main .participa {
-        background: linear-gradient(
-            135deg,
-            #faf3e9 0%,
-            #f3e5d3 50%,
-            #eedbc4 100%
-        ) !important;
-    }
-
-    #main .ubicacion {
-        background: linear-gradient(
-            135deg,
-            #dfc2a2 0%,
-            #ead5bd 52%,
-            #e4c8aa 100%
-        ) !important;
-    }
-
     .experiencias .row {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -733,6 +673,10 @@
 /* ACCESIBILIDAD */
 
 @media (prefers-reduced-motion: reduce) {
+
+    #banner .banner-video {
+        display: none;
+    }
 
     .experiencias .box-experiencia,
     .participacion-card {

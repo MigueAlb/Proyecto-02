@@ -257,6 +257,22 @@ button.button.alt:hover {
     box-shadow: none;
 }
 
+/* En las paginas auxiliares el menu debe ocupar su altura real dentro
+   del encabezado; asi el boton activo no invade la imagen del banner. */
+body:not(.homepage) #header {
+    display: flex;
+    flex-direction: column;
+}
+
+body:not(.homepage) #nav {
+    flex: 0 0 auto;
+    margin: auto 0 0;
+}
+
+body:not(.homepage) #nav > ul > li > a {
+    display: block;
+}
+
 #nav > ul > li > a {
     color: #f8f3e9;
     border: 1px solid transparent;

@@ -101,6 +101,11 @@
 
     width: 66px;
     height: 66px;
+    min-width: 66px;
+    min-height: 66px;
+
+    flex: 0 0 66px !important;
+    align-self: flex-start;
     box-sizing: border-box;
 
     margin: -2px 0 30px;

@@ -5,8 +5,71 @@
     padding-bottom: 2em;
 }
 
-.historia-principal {
-    background-color: var(--marfil);
+
+/* banner */
+
+.hero-historia {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    background-image:
+        linear-gradient(
+            110deg,
+            rgba(27, 36, 40, 0.82),
+            rgba(27, 36, 40, 0.45)
+        ),
+        url("../resources/images/Modified WhatsApp Image 2026-10-03 at 19.08.11.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-historia-contenido {
+    max-width: 760px;
+    padding: 2.5em;
+    background-color: rgba(27, 36, 40, 0.88);
+    border-left: 6px solid var(--dorado);
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-historia h2 {
+    margin-bottom: 0.7em;
+    color: var(--blanco);
+    font-size: clamp(2em, 5vw, 3.2em);
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.hero-historia p {
+    margin-bottom: 1.5em;
+    color: var(--marfil);
+    font-size: 1.08em;
+    line-height: 1.8;
+}
+
+
+/* historia principal */
+
+#main .historia-principal {
+    background:
+        radial-gradient(
+            ellipse at 82% 12%,
+            rgba(255, 255, 255, 0.88),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 12% 85%,
+            rgba(231, 181, 108, 0.22),
+            transparent 57%
+        ),
+        linear-gradient(
+            125deg,
+            #f7f0e5 0%,
+            #efe1cf 55%,
+            #fbf6ee 100%
+        );
 }
 
 .texto-historia {
@@ -17,57 +80,80 @@
     margin-bottom: 1em;
     color: var(--rojo-vino);
     font-size: 1.7em;
+    font-weight: 800;
+    line-height: 1.3;
 }
 
 .texto-historia p {
     margin-bottom: 1.25em;
+    color: var(--texto);
+    font-weight: 400;
+    line-height: 1.8;
 }
 
 
-/* banner */
+/* mercado nocturno */
 
-.hero-historia {
-    min-height: 470px;
-    display: flex;
-    align-items: center;
-    background-image:
-        linear-gradient(rgba(27, 36, 40, 0.72), rgba(27, 36, 40, 0.72)),
-        url("../resources/images/Modified WhatsApp Image 2026-10-03 at 19.08.11.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.hero-historia-contenido {
-    max-width: 760px;
-    padding: 2.5em;
-    background-color: rgba(27, 36, 40, 0.88);
-    border-left: 6px solid var(--dorado);
-    border-radius: 8px;
-}
-
-.hero-historia h2 {
-    color: var(--blanco);
-    font-size: clamp(2em, 5vw, 3.2em);
-    line-height: 1.15;
-    margin-bottom: 0.7em;
-}
-
-.hero-historia p {
-    color: var(--marfil);
-    margin-bottom: 1.5em;
+#main #mercado {
+    background:
+        radial-gradient(
+            ellipse at 18% 15%,
+            rgba(255, 255, 255, 0.70),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 85% 85%,
+            rgba(143, 29, 44, 0.08),
+            transparent 52%
+        ),
+        linear-gradient(
+            120deg,
+            #e8dfd2 0%,
+            #f2e5d5 52%,
+            #e5d3bd 100%
+        );
 }
 
 
 /* proposito */
 
-.proposito {
-    background-color: var(--marfil-tostado);
+#main .proposito {
+    background:
+        radial-gradient(
+            ellipse at 82% 12%,
+            rgba(255, 255, 255, 0.88),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 12% 85%,
+            rgba(231, 181, 108, 0.22),
+            transparent 57%
+        ),
+        linear-gradient(
+            125deg,
+            #f7f0e5 0%,
+            #efe1cf 55%,
+            #fbf6ee 100%
+        );
 }
+
+
+/* tarjetas de proposito */
 
 .proposito-card {
     height: 100%;
+    padding: 2.5em 2em;
+    background-color: var(--blanco);
+    border: 0;
     border-top: 5px solid var(--rojo-vino);
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(45, 32, 25, 0.10);
     text-align: center;
+    transition: box-shadow 0.25s ease;
+}
+
+.proposito-card:hover {
+    box-shadow: 0 12px 28px rgba(45, 32, 25, 0.15);
 }
 
 .proposito-card > .icon {
@@ -78,15 +164,40 @@
 }
 
 .proposito-card h3 {
+    margin-bottom: 0.75em;
     color: var(--rojo-vino);
+    font-size: 1.35em;
+    font-weight: 800;
 }
 
 .proposito-card p {
     margin-bottom: 0;
+    color: var(--texto);
+    line-height: 1.8;
 }
 
 
 /* invitacion */
+
+#main .seccion-clara {
+    background:
+        radial-gradient(
+            ellipse at 18% 15%,
+            rgba(255, 255, 255, 0.70),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 85% 85%,
+            rgba(143, 29, 44, 0.08),
+            transparent 52%
+        ),
+        linear-gradient(
+            120deg,
+            #e8dfd2 0%,
+            #f2e5d5 52%,
+            #e5d3bd 100%
+        );
+}
 
 .invitacion-historia {
     max-width: 800px;
@@ -97,11 +208,17 @@
 .invitacion-historia h2 {
     margin-bottom: 0.75em;
     color: var(--rojo-vino);
-    font-size: 2em;
+    font-size: clamp(1.8em, 3vw, 2.25em);
+    font-weight: 900;
+    line-height: 1.3;
 }
 
 .invitacion-historia p {
-    margin-bottom: 1.5em;
+    max-width: 680px;
+    margin: 0 auto 1.5em;
+    color: var(--texto);
+    font-size: 1.08em;
+    line-height: 1.8;
 }
 
 .invitacion-historia .button {
@@ -109,7 +226,25 @@
 }
 
 
-/* responsive */
+/* responsive tablet */
+
+@media screen and (max-width: 980px) {
+
+    .hero-historia {
+        min-height: 420px;
+    }
+
+    .hero-historia-contenido {
+        padding: 2em;
+    }
+
+    .proposito-card {
+        padding: 2em 1.5em;
+    }
+}
+
+
+/* responsive celular */
 
 @media screen and (max-width: 736px) {
 
@@ -121,15 +256,55 @@
         padding: 1.5em;
     }
 
+    .hero-historia h2 {
+        font-size: 2em;
+    }
+
+    .hero-historia p {
+        font-size: 1em;
+    }
+
     .texto-historia {
         padding: 1em 0;
     }
 
+    .texto-historia h3 {
+        font-size: 1.5em;
+    }
+
     .proposito-card {
         height: auto;
+        padding: 2em 1.5em;
+    }
+
+    .proposito-card > .icon {
+        font-size: 2.5em;
     }
 
     .invitacion-historia h2 {
         font-size: 1.65em;
     }
+
+    .invitacion-historia p {
+        font-size: 1em;
+    }
+}
+
+
+/* accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .proposito-card {
+        transition: none;
+    }
+}
+
+/* FONDOS CONTINUOS DE HISTORIA */
+
+#main .historia-principal,
+#main #mercado,
+#main .proposito,
+#main .seccion-clara {
+    background: var(--fondo-continuo);
 }

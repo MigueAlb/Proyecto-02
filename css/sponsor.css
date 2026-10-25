@@ -28,14 +28,15 @@
     width: 100%;
     min-width: 0;
     height: 150px;
-    padding: 1.25em;
+    padding: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: var(--blanco);
-    border-radius: 5px;
-    border-bottom: 3px solid var(--dorado);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .lista_aliados .aliado img {
